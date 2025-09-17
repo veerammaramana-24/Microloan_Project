@@ -1,148 +1,120 @@
 # Microloan Management System
 
-A modern web application for managing microloans with AI-powered credit scoring and fraud detection capabilities.
+![MIT License](https://img.shields.io/badge/License-MIT-green.svg)
+![React](https://img.shields.io/badge/Frontend-React-blue)
+![Flask](https://img.shields.io/badge/Backend-Flask-orange)
+![Machine Learning](https://img.shields.io/badge/AI-Credit%20Scoring-yellow)
 
-## Features
+A modern web application for managing microloans with **AI-powered credit scoring** and **fraud detection** capabilities.
+
+---
+
+## 📑 Table of Contents
+- [Features](#features)
+- [Demo](#demo)
+- [Tech Stack](#tech-stack)
+- [Installation](#installation)
+- [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+- [Development](#development)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
+
+## ✨ Features
 
 - **Loan Application Processing**: User-friendly interface for loan applications with real-time validation
 - **AI Credit Scoring**: Advanced credit assessment using multiple data points including:
-  - Income and employment history
-  - Phone usage patterns
-  - Transaction history
+  - Income and employment history  
+  - Phone usage patterns  
+  - Transaction history  
 - **Fraud Detection System**: Real-time fraud risk assessment with ML-based pattern analysis
 - **Interactive Dashboard**: Visual representation of loan statistics and performance metrics
 - **Detailed Loan Management**: Comprehensive view of individual loan details and payment tracking
 
-## Tech Stack
+---
 
-### Frontend
-- React.js with Vite
-- Material-UI (MUI) for UI components
-- React Router for navigation
-- Chart.js for data visualization
 
-### Backend
-- Flask (Python)
-- ML models for credit scoring and fraud detection
-- CORS support for cross-origin requests
 
-## Installation
+## 🖼 Screenshots
 
-### Prerequisites
-- Node.js (v14 or higher)
-- Python 3.8 or higher
-- pip (Python package manager)
+### Dashboard
+![Loan-Management-Dashboard Screenshot](./assets/Loan-Management-Dashboard.png)
 
-### Frontend Setup
+### AI Credit Scoring
+![AI-Credit-Scoring Screenshot](./assets/AI-Credit-Scoring.png)
 
-1. Clone the repository
-2. Navigate to the project directory:
-   ```bash
-   cd sp
-   ```
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
-4. Start the development server:
-   ```bash
-   npm run dev
-   ```
-
-### Backend Setup
-
-1. Navigate to the backend directory:
-   ```bash
-   cd backend
-   ```
-2. Create and activate a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-3. Install Python dependencies:
-   ```bash
-   pip install flask flask-cors
-   ```
-4. Start the Flask server:
-   ```bash
-   python app.py
-   ```
-
-## Usage
-
-1. **Dashboard**: Access the main dashboard at http://localhost:5173/ to view loan statistics and performance metrics
-
-2. **Loan Application**: 
-   - Navigate to "Apply for Loan"
-   - Fill in required information
-   - Submit application for instant decision
-
-3. **Credit Scoring**:
-   - Access credit scoring module
-   - Input customer data for credit assessment
-   - View detailed credit analysis
-
-4. **Fraud Detection**:
-   - Use the fraud detection system
-   - Input transaction details
-   - Get real-time risk assessment
-
-## API Endpoints
-
-### Credit Scoring
-```
-POST /api/credit-score
-```
-Calculates credit score based on provided data points.
-
-**Request Body:**
-```json
-{
-  "monthlyIncome": number,
-  "employmentDuration": number,
-  "phoneData": {
-    "callFrequency": number,
-    "avgCallDuration": number,
-    "contactsCount": number
-  },
-  "transactionData": {
-    "avgMonthlyTransactions": number,
-    "lastTransactionAmount": number,
-    "transactionHistory": number
-  }
-}
-```
+### Loan Application
+![Loan-Application Screenshot](./assets/Loan-Application.png)
 
 ### Fraud Detection
+![Fraud-Detection Screenshot](./assets/Fraud-Detection-System.png)
+
+### Console 1
+![Console1 Screenshot](./assets/Console1.png)
+
+### Console 2
+![Console2 Screenshot](./assets/Console2.png)
+
+## 🎥 Demo
+### Video Walkthrough
+[▶ Watch Demo](https://drive.google.com/file/d/1ZmyWaHnXvXw0pzUsOPAYbMjJ_EKHukS7/view?usp=sharing)
+
+
+
+## 🛠 Tech Stack
+
+### Frontend
+- React.js with Vite  
+- Material-UI (MUI) for UI components  
+- React Router for navigation  
+- Chart.js for data visualization  
+
+### Backend
+- Flask (Python)  
+- ML models for credit scoring and fraud detection  
+- CORS support for cross-origin requests  
+
+---
+
+## ⚙ Installation
+
+### Prerequisites
+- Node.js (v14 or higher)  
+- Python 3.8 or higher  
+- pip (Python package manager)  
+
+### Frontend Setup
+```bash
+# Clone the repository
+git clone https://github.com/veerammaramana-24/Microloan_Project.git
+
+# Navigate to frontend
+cd sp
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
-POST /api/fraud-check
-```
-Performs fraud risk assessment on transactions.
 
-**Request Body:**
-```json
-{
-  "amount": number,
-  "frequency": number,
-  "newAccount": boolean
-}
-```
+### ⚙️ Backend Setup
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/loan-management.git
+cd loan-management/backend
 
-## Development
+# Setup virtual environment
+python -m venv venv
+source venv/bin/activate
 
-- Frontend development server runs on port 5173
-- Backend API server runs on port 5000
-- Enable CORS is handled for development environment
+# Windows:
+ venv\Scripts\activate
 
-## Contributing
+# Install dependencies
+pip install flask flask-cors
 
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a new Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+# Run the server
+python app.py
